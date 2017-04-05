@@ -1,4 +1,4 @@
-#https://docs.python.org/3/tutorial/controlflow.html
+#https://docs.python.org/3/tutorial/controlflow.html#for-statements
 '''
 в питоне есть несколько типов данных, вот основные из них:
 - тюпль / кортеж / константный список ()
