@@ -1,4 +1,4 @@
-#https://docs.python.org/3/tutorial/controlflow.html
+#https://docs.python.org/3/tutorial/controlflow.html#the-range-function
 a=range(0,10,3)
 print(a, type(a))
 for i in a:
