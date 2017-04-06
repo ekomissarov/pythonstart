@@ -2,6 +2,11 @@
 def ask_ok(prompt, retries=4, reminder='Please try again!'):
     while True:
         ok = input(prompt)
+        '''
+        оператор in проверяет членство элемента слева, во множестве справа
+        not in - отсутствие во множестве
+        is / is not - проверка объектов на идентичность (id() - идунтификатор объекта)
+        '''
         if ok in ('y', 'ye', 'yes'):
             return True
         if ok in ('n', 'no', 'nop', 'nope'):
