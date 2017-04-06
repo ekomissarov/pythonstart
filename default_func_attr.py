@@ -1,3 +1,4 @@
+# https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions
 # учебный скрипт ===
 # Значения функций по умолчанию (иллюстрация вычасления аргументов один раз, но не при каждом вызове функции)
 def grow1(a,b=[]):
