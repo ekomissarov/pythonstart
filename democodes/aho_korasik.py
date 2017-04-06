@@ -50,7 +50,9 @@ def main():
     counter_update = counter.update # cache the lookup (for CPython)
     with open('file1', 'rb') as file1:
         for line in file1:
-            counter_update(find_substrings(line))
+            tmp = find_substrings(line) # получаем список(list) совпадений с регулярными выражениями
+            print('debug:', tmp)
+            counter_update(tmp) # добавляем совпадения в счетчик
 
     # write substrings frequencies
     write = getattr(sys.stdout, 'buffer', sys.stdout).write
