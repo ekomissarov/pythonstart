@@ -1,4 +1,4 @@
-#https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions
+#https://docs.python.org/3/tutorial/datastructures.html
 a = [1,2,3]
 a.append((1,2,3)) # a[len(a):] = [x], a.insert(len(a), x)
 a.extend((1,2,3)) # a[len(a):] = iterable
