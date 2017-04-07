@@ -21,7 +21,7 @@ print(a.index(3)) # возвращает индекс элемента list.inde
 a.clear() # del a[:]
 print('#', a)
 
-#list.count(x) Return the number of times x appears in the list.
+# list.count(x) Return the number of times x appears in the list.
 # list.sort(key=None, reverse=False)
 # list.reverse() Reverse the elements of the list in place.
 # list.copy() Return a shallow copy of the list. Equivalent to a[:]
