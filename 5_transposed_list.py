@@ -7,3 +7,5 @@ matrix = [
 print(matrix)
 a = [[row[i] for row in matrix] for i in range(4)]
 print(a)
+
+print(list(zip(*a)))
