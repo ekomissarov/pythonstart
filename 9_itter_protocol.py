@@ -17,3 +17,5 @@ class Reverse:
 rev = Reverse('spam')
 for char in rev:
     print(char)
+    
+print(dir(rev))
