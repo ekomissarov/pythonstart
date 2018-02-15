@@ -1,8 +1,1 @@
-a = list(range(10,20))
-
-a.append("qkrq")
-b = a.copy()
-print(a)
-
-
-print("Hallo World!")
+print(r"\a/\b/\c/ Hallo World! \a/\b/\c/ ")
