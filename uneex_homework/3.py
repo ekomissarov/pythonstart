@@ -13,3 +13,25 @@ Output:
 YES
 '''
 
+digit = input("Введите целое число:")
+if digit[0]=="0":
+    print("Число начинается с нуля")
+    exit(0)
+
+BaseValue = digit = int(digit)
+t = NewValue = 0
+
+while(digit>0):
+    t = digit%10
+    digit = digit//10  # целочисленное деление
+    NewValue = NewValue * 10 + t
+
+
+print("Перевернутая версия:", NewValue)
+
+# будем использовать условное выражение (более короткое в отличие от условного оператора)
+# трехместная операция / тернарная операция
+print("Полиндром" if BaseValue == NewValue else "НЕ Полиндром")
+
+# либо такой "грязный хак"
+# print(BaseValue == NewValue and "Полиндром" or "НЕ Полиндром")
