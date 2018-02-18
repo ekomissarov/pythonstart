@@ -54,3 +54,12 @@ squares = list(sqg(10))  # генератор "разряжается"
 print(squares)
 del squares
 
+# "усложненный многомерный" генератор
+a = [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+print(a)
+del a
+
+# некоторые другие примеры конструкций
+freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']
+print([weapon.strip() for weapon in freshfruit])
+print(*(s for s in dir() if not s.startswith("__")), sep=", ")
