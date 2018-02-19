@@ -31,7 +31,7 @@ print(transposed)
 transposed = list(zip(*matrix))
 print(transposed)
 
-#  по другому с предварителььной распаковкой
+#  по другому с предварительной распаковкой
 a, *b = matrix
 print(tuple(zip(a, *b)))
 

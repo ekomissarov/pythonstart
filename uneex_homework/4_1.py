@@ -21,7 +21,7 @@ squares = [i*i for i in range(10)]
 print(squares)
 del squares
 
-# создав lambds функцию и примению ее к генератору с помошью map
+# создав lambda функцию и примению ее к генератору с помошью map
 squares = list(map(lambda x: x**2, range(10)))
 print(squares)
 del squares
