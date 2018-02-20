@@ -8,6 +8,9 @@ def cheeseshop(kind, *arguments, **keywords):
     print(keywords)
     for kw in keywords:
         print(kw, ":", keywords[kw])
+# аналогично, но без лишней операции индексирования:
+    for k, v in keywords.items():
+        print(k, ":", v)
 
 cheeseshop("Limburger", "It's very runny, sir.",
            "It's really very, VERY runny, sir.",
