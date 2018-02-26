@@ -1,5 +1,7 @@
 '''
 матрицы, вложенные структуры
+
+https://docs.python.org/3/tutorial/datastructures.html#nested-list-comprehensions
 '''
 
 matrix = [
