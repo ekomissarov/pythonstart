@@ -21,11 +21,12 @@ for char in rev:
 #print(rev.__next__())  # одноразовый иттератор
 
 rev1 = (1,2,3,4,5,6,7,8)
+print("\nПроходим циклом первый раз")
 for char in rev1:
     print(char, end=" ")
 
 #print(rev.__next__())   # тоже одноразовый иттератор
 
-print("пробуем еще раз")
-for char in iter(rev1):
+print("\nПроходим циклом второй раз")
+for char in rev1:
     print(char, end=" ")

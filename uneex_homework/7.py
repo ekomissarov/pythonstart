@@ -14,8 +14,7 @@ Output:
 S = tuple(eval(input("Введите последовательность S: ")))
 print(S)
 
-max = S[0]
-max_old = S[0]
+max = max_old = S[0]
 
 for i in S:
     if i > max :
