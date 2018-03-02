@@ -54,10 +54,11 @@ print(c.__dict__, c.asdfg)  # отрабатывает метод __getattr__
 c.newvalue = 7
 print(c.random, c.random, c.random)
 c.random = 5
-print(c.random, c.random, c.random)
+print(c.random, c.random, c.random) # теперь будет 5 5 5
 del c.random
 print(c.random, c.random, c.random)
 
 
-
+print(hasattr(c, "newvalue"))
+print(hasattr(c, "random")) # тоже True, так как функция обращается к __getattr__
 
