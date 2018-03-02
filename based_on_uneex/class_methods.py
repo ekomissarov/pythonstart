@@ -17,7 +17,7 @@ class C:
         return self.val+self.res  # довольно бессмысленно, так никто не делает, это для иллюстрации
 
     def __getattr__(self, item):
-        if item == "random":
+        if item == "random":  # обеспечение доступа пользователя к вычисляемым значениям
             return random.randrange(10)
         return "NOPE"  # опять же так никто не делает :)
 
@@ -52,8 +52,11 @@ print(c.__dict__, c.asdfg)  # отрабатывает метод __getattr__
 # с этими методами требуется аккуратная работа, чтобы избегать рекурсивных вызовов и др. проблем, ЧИТАТЬ ДОКУМЕНТАЦИЮ
 
 c.newvalue = 7
-print(c.random)
-
+print(c.random, c.random, c.random)
+c.random = 5
+print(c.random, c.random, c.random)
+del c.random
+print(c.random, c.random, c.random)
 
 
 
