@@ -1,3 +1,5 @@
+import random
+
 class C:
     def __init__(self, per1, per2):
         self.val, self.res = per1, per2
@@ -15,6 +17,8 @@ class C:
         return self.val+self.res  # довольно бессмысленно, так никто не делает, это для иллюстрации
 
     def __getattr__(self, item):
+        if item == "random":
+            return random.randrange(10)
         return "NOPE"  # опять же так никто не делает :)
 
     def __setattr__(self, key, value):
@@ -45,10 +49,10 @@ print(c.__dict__, c.asdfg)  # отрабатывает метод __getattr__
 # __setattr__ - когда присваеваем значение какому либо атрибуту (возможно не существующему)
 # __delattr__ - когда удаляем, можно удалить любое поле любого объекта, (если сами его сделали)
 # __dir__ - можно переписать чтобы он все это показывал
-
+# с этими методами требуется аккуратная работа, чтобы избегать рекурсивных вызовов и др. проблем, ЧИТАТЬ ДОКУМЕНТАЦИЮ
 
 c.newvalue = 7
-
+print(c.random)
 
 
 
