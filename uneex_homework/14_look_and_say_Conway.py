@@ -34,14 +34,43 @@ def generat_conoway(seed):
 
     # print(l) # A005150
 
+'''
+def generat_conoway1(n):
+    p = "1"
+    seq = [1]
+    while (n > 1):
+        q = ''
+        idx = 0 # Index
+        l = len(p) # Length
+        while idx < l:
+            start = idx
+            idx = idx + 1
+            while idx < l and p[idx] == p[start]:
+                idx = idx + 1
+            q = q + str(idx-start) + p[start]
+        n, p = n - 1, q
+        seq.append(int(p))
+    return seq
 
-N = int(input("Введите N: "))
 
-j = 0
-for i in generat_conoway(9):
-    N -= 1
-    if N < 0:
-        print("шаг {} цифра: {}".format(j, i))
-        break
-    j += 1
+print(A005150(10))
+exit(1)
+'''
+
+
+
+
+
+#N = int(input("Введите N: "))
+for N in range(100490, 100510):
+# проход диапазона шагов: это вообще не оптимально т.к. на каждой итерации происходит
+# новый пробег по всему генератору, но наглядно ))
+
+    step = 0
+    for i in generat_conoway(9):
+        N -= 1
+        if N < 0:
+            print("шаг {} цифра: {}".format(step, i))
+            break
+        step += 1
 
