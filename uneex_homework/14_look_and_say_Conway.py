@@ -10,6 +10,7 @@ Input:
 Output:
 
 2
+
 '''
 
 def generat_conoway(seed):
@@ -34,28 +35,33 @@ def generat_conoway(seed):
 
     # print(l) # A005150
 
-'''
-def generat_conoway1(n):
-    p = "1"
-    seq = [1]
-    while (n > 1):
-        q = ''
-        idx = 0 # Index
-        l = len(p) # Length
-        while idx < l:
+
+def generat_conoway1(seed):
+    yield seed
+    previous = str(seed)
+    seq = str(seed)
+    while True:
+        next = ''
+        idx = 0  # счетчик количества одинаковых цифр
+        l = len(previous)  # длина строки p
+        while idx < l:  # проход по строке p
             start = idx
-            idx = idx + 1
-            while idx < l and p[idx] == p[start]:
-                idx = idx + 1
-            q = q + str(idx-start) + p[start]
-        n, p = n - 1, q
-        seq.append(int(p))
-    return seq
+            idx += 1  # засчитываем первую цифру, изначально счетчик установлен в 0
+            while idx < l and previous[idx] == previous[start]:
+                idx += 1  # считаем количество цифр
+            next = "{}{}{}".format(next, str(idx-start), previous[start])
+        previous = next
+
+        for i in next:
+            yield i
 
 
-print(A005150(10))
-exit(1)
-'''
+
+
+
+#print(generat_conoway1(10))
+#exit(1)
+
 
 
 
@@ -67,7 +73,7 @@ for N in range(100490, 100510):
 # новый пробег по всему генератору, но наглядно ))
 
     step = 0
-    for i in generat_conoway(9):
+    for i in generat_conoway1(9):
         N -= 1
         if N < 0:
             print("шаг {} цифра: {}".format(step, i))
