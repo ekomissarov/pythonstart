@@ -13,7 +13,7 @@ Output:
 
 '''
 
-def generat_conoway(seed):
+def generat_conoway1(seed):
     yield seed
     l = [int(seed)]
     s = 1
@@ -36,7 +36,7 @@ def generat_conoway(seed):
     # print(l) # A005150
 
 
-def generat_conoway1(seed):
+def generat_conoway2(seed):
     yield seed
     previous = str(seed)
     seq = str(seed)
@@ -54,16 +54,6 @@ def generat_conoway1(seed):
 
         for i in next:
             yield i
-
-
-
-
-
-#print(generat_conoway1(10))
-#exit(1)
-
-
-
 
 
 
