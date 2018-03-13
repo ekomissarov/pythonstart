@@ -16,8 +16,8 @@ class txtscr():
     def __str__(self):
         """Преобразует экран в строку"""
         sep = "+" + "-" * len(self.screen[0]) + "+"
-        return sep + "\n" + "\n".join("{:>2}".format(n) + "|" + s + "|" for n, s in enumerate(self.screen)) + "\n" + sep
-        #return sep + "\n" + "\n".join("|" + s + "|" for s in self.screen) + "\n" + sep
+        #return sep + "\n" + "\n".join("{:>2}".format(n) + "|" + s + "|" for n, s in enumerate(self.screen)) + "\n" + sep
+        return sep + "\n" + "\n".join("|" + s + "|" for s in self.screen) + "\n" + sep
 
 
     def dot(self, x, y, ink="*"):
