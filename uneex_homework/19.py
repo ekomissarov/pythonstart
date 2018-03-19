@@ -24,6 +24,7 @@ Output:
 srch = "исходной стXроке подстрока, совпадающая со строкой"
 needle = "ст@@ок@"
 
+'''
 pointer = absposition = 0
 needle = needle.split("@")
 notfound = True
@@ -42,7 +43,6 @@ while notfound:
         result = absposition
 
         for i in needle:
-            #CURRSTRING = srch[absposition:]
             pointer = srch[absposition:].find(i)
             if pointer:
                 notfound = True
@@ -50,3 +50,26 @@ while notfound:
             absposition += pointer + len(i) + 1
 
 print(result)
+'''
+
+patt = []
+n = 0
+
+for w in needle.split("@"):
+    if w:
+        patt.append((n, w))
+        n += len(w)
+    n += 1
+
+for i in range(len(srch) -len(needle)):
+    for k, w in patt:
+        if srch[i+k:i+k+len(w)] != w:
+            break
+    else:
+        print(i)
+        break
+else:
+    if patt or len(srch)>len(needle):
+        print(-1)
+    else:
+        print(0)

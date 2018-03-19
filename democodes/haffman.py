@@ -14,6 +14,8 @@ from collections import namedtuple
 
 # класс для ветвей дерева - внутренних узлов; у них есть потомки
 # https://docs.python.org/3/library/collections.html#namedtuple-factory-function-for-tuples-with-named-fields
+
+# namedtuple Returns a new tuple subclass named Node, он наследуется классом Node
 class Node(namedtuple("Node", ["left", "right"])):
     def walk(self, code, acc):
         # чтобы обойти дерево нам нужно:

@@ -18,12 +18,15 @@ Output:
 545
 '''
 
+'''
 text = ""
 inp = True
 
 while inp:
     inp = input("#> ")
     text = "{} {}".format(text, inp)
+
+
 
 result = []
 text = text.split(" ")
@@ -37,3 +40,20 @@ for i in text:
             result.append(int(i))
 
 print(max(result))
+'''
+
+inp = []
+s  = input("#> ")
+while s:
+    inp.append(s)
+    s = input("#> ")
+
+res = "\n".join(inp)
+Max = None
+
+for w in res.split():
+    if w.isdecimal() or w[0] == "-" and w[1:].isdecimal():
+        if Max is None or Max < int(w):
+            Max = int(w)
+
+print(Max)
