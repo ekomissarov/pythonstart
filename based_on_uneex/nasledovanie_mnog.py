@@ -11,6 +11,8 @@ class C(A,B):
 
 a = A()
 print(a.__dict__, "\n", A.__dict__)  # var это поле класса
+print ([i for i in dir(a) if not i.startswith("__")])
+
 b = B()
 print(b.fun())
 print ([i for i in dir(b) if not i.startswith("__")])
