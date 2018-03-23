@@ -26,6 +26,9 @@ class C:
         self.__dict__[key] = value
         print("вызов __setattr__", self.__dict__)
 
+    #def __del__(self): # вызывается когда refcounter на объект становится равным 0
+
+
 c = C(12,56)
 print(c)
 

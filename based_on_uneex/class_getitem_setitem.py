@@ -1,5 +1,6 @@
 class C:
     def __getitem__(self, item):
+        print(item)
         if type(item) is int:
             return item%2
         elif type(item) is slice:
