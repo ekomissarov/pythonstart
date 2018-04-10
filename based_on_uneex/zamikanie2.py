@@ -71,9 +71,14 @@ def h1(x):
 print(h1(100500).__closure__[0].cell_contents)
 
 
-def h1(x):
-    def h2(a, t = x):
+def k1(x):
+    def k2(a, t = x):
             return a+t  # замыкание на лицо
-    return h2
+    return k2
 
+k = k1(100500)
+print(k(3), k(5), k(4, 1000))
+print(k.__closure__)  # нет тут никакого замыкания
+# этой функции не потребовалось замыкание этот объект внутри функции называется t
+# см. https://gist.github.com/dmitrysoshnikov/700292
 
