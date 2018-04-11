@@ -4,7 +4,7 @@ class Desc:
         print("Set {} of {}".format(value, instance))
         self.var = value
 
-    def __get__(self, instance, owner):
+    def __get__(f, instance, owner):
         print("Get from {} (class {})".format(instance, owner))
         return self.var
 
