@@ -1,4 +1,5 @@
 # https://docs.python.org/3/reference/datamodel.html#context-managers
+# https://docs.python.org/3/reference/compound_stmts.html#the-with-statement
 # https://youtu.be/6cXWBlH5P6U?list=PL6kSdcHYB3x7VJXiCA8OjYAiRBHi7mZTJ&t=4733
 
 class Demo:
