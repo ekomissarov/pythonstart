@@ -1,3 +1,6 @@
+# https://docs.python.org/3/reference/datamodel.html#context-managers
+# https://youtu.be/6cXWBlH5P6U?list=PL6kSdcHYB3x7VJXiCA8OjYAiRBHi7mZTJ&t=4733
+
 class Demo:
     def __init__(self):
         self.data = [i for i in range(10)]
