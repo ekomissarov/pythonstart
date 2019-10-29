@@ -14,4 +14,4 @@ print(id(a), id(b), id(c))
 tmp = a[0]
 for i in range(10):
     tmp = tmp[0]
-    print(i, tmp)
+    print(i, tmp, id(tmp))
