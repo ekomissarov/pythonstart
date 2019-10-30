@@ -13,7 +13,7 @@ print(id(a), id(b), id(c))
 
 tmp = a[0]
 i=0
-while i<10:
+while i<=10:
     tmp = tmp[0]
     print(i, tmp, id(tmp))
     i+=1
