@@ -12,6 +12,8 @@ print(a[0], b[0], c[0])
 print(id(a), id(b), id(c))
 
 tmp = a[0]
-for i in range(10):
+i=0
+while i<10:
     tmp = tmp[0]
     print(i, tmp, id(tmp))
+    i+=1
