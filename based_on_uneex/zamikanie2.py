@@ -5,10 +5,10 @@ def f1(x):
         return f3
     return f2
 
-f = f1(100500)  # ссылкается на callable объект f2
+f = f1(100500)  # ссылается на callable объект f2
 print(f, f.__closure__[0].cell_contents)  # видно что f создана в локальном пространстве имен функции f1
 
-ff=f() # ссылкается на callable объект f3
+ff=f() # ссылается на callable объект f3
 print(ff, ff.__closure__[0].cell_contents)
 
 '''
